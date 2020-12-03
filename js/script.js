@@ -122,7 +122,7 @@ function print(array, container) {
 
       const {name, prefix, family} = element;
       container.append(`
-        <div>
+        <div class="single-icon-container">
           <i class="${family} ${prefix}${name}"></i>
           <div class="icons-title">${name.toUpperCase()}</div>
         </div>

@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+#title-container {
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.single-icon-container {
+  width: 25%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.single-icon-container i {
+  font-size: 30px;
+}
+.icons-title {
+  font-size: 20px;
+}
