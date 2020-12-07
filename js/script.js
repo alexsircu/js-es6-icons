@@ -10,6 +10,13 @@
 // Visualizzare le icone di colore diverso in base al
 // tipo.
 
+// milestone 3:
+// aggiungere una select per filtrare le icone in
+// base al tipo.
+// Popolare le options della select dinamicamente
+// e, ogni volta che cambia il valore selezionato,
+// visualizzare le icone corrispondenti.
+
 $(document).ready(
   function() {
 
@@ -122,6 +129,24 @@ $(document).ready(
     // console.log(coloredIcons);
 
     print(coloredIcons, container);
+
+    printOptions($("#type"), types);
+
+    $("#type").change(
+      function () {
+        const selectedType = $(this).val();
+        if (selectedType == "") {
+          print(coloredIcons, container);
+        } else {
+          const filteredIcons = coloredIcons.filter(
+            (element) => {
+              return element.type == selectedType;
+            }
+          );
+          print(filteredIcons, container);
+        }
+      }
+    );
   }
 );
 
@@ -173,4 +198,15 @@ function colorIcons(iconsArray, colorsArray, typesArray) {
   );
 
   return arrayColored;
+};
+
+function printOptions(select, types) {
+
+  types.forEach(
+    (element) => {
+      select.append(`
+        <option value="${element}">${element}</option>`)
+    }
+  );
+
 };

@@ -33,3 +33,8 @@
 .icons-title {
   font-size: 20px;
 }
+
+.select-val {
+  text-align: center;
+  padding-top: 10px;
+}
